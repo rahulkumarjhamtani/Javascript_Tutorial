@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Object</title>
+</head>
+<body>
+    <div class="container">
+        
+        <span id="maths"></span>
+    </div>
+    <script>
+        let m = Math;
+        console.log(m);
+        document.getElementById("maths").innerHTML = m;
+        console.log("The value of Math.E is ", Math.E);
+        console.log("The value of Math.PI is ", Math.PI);
+        console.log("The value of Math.LN2 is ", Math.LN2);
+        console.log("The value of Math.SQRT2 is ", Math.SQRT2);
+        console.log("The value of Math.SQRT1_2 is ", Math.SQRT1_2);
+        console.log("The value of Math.LOG10E is ", Math.LOG10E);
+
+        let a =34.6798;
+        console.log("The rounded value of a is ", Math.round(a));
+        console.log("The ceil value of a is ", Math.ceil(a));
+        console.log("The floor value of a is ", Math.floor(a));
+        
+        console.log("2 raised to the power 12 is ", Math.pow(2,12));
+        
+        console.log("Square root of 36 is", Math.sqrt(36));
+        
+        console.log("The absolute value of 5.66 is ", Math.abs(5.66));
+        console.log("The absolute value of -5.66 is ", Math.abs(-5.66));
+
+        console.log("The value of sin(pi) is ", Math.sin(Math.PI));
+        console.log("The value of sin(pi/2) is ", Math.sin(Math.PI/2));
+        console.log("The value of sin(pi/4) is ", Math.sin(Math.PI/4));
+        console.log("The value of tan(pi) is ", Math.tan(Math.PI));
+        console.log("The value of tan(pi/2) is ", Math.tan(Math.PI/2));
+        console.log("The value of tan(pi/4) is ", Math.tan(Math.PI/4));
+        console.log("The value of cos(pi) is ", Math.cos(Math.PI));
+        console.log("The value of cos(pi/2) is ", Math.cos(Math.PI/2));
+        console.log("The value of cos(pi/4) is ", Math.cos(Math.PI/4));
+
+        console.log("Minimum value = ", Math.min(3,20,1));
+        console.log("Maximum value = ", Math.max(3,20,1));
+
+        //Random number
+        let r = Math.random();
+        console.log("Random number = ", r);
+
+        let x1 = 0;
+        let y1 = 6;
+        let dice = x1 + (y1-x1)* Math.random();
+        console.log("Your Dice number = ", Math.round(dice));
+        if(Math.round(dice)==6)
+        {
+            console.log("You won");
+        } 
+        
+    </script>
+</body>
+</html>

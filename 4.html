@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array and Objects</title>
+</head>
+<body>
+    <div class="container">HTML</div>
+
+    <script>
+        let var1 = 34;
+        let var2 = "string";
+        let var3 = true;
+        let var4 = null;
+        let var5 = undefined;
+
+        let employee = {                //employee.name OR employee['name']
+            name : "Rahul",
+            age : 20,
+            branch : "cs"
+        };
+        console.log(employee);
+        
+        let name = [1,2,3,"Rahul"];
+        console.log(name);
+        console.log(name[3]);
+
+        let names = new Array(1,2,3,"Rahul");       //for 100 elements let names = new Array(100);
+        console.log(names);
+        console.log(names.length);
+
+        let names2 = new Array(45,21,33,"Rahul");
+        names2 = names2.sort();
+        console.log(names2);
+    </script>
+</body>
+</html>

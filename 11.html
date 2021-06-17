@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+</head>
+<style>
+    .container
+    {
+        font-size : 25px;
+        background-color : blanchedalmond;
+        border:2px solid gray;
+        margin:10px;
+        padding:30px;
+        text-align:center;
+    }
+    #time
+    {
+        font-weight : bold;
+    }
+</style>
+<body>
+    <div class="container">
+        Current Time = <span id="time"></span>
+    </div>
+    <script>
+        let now = new Date();
+        console.log(now);
+        let dt = new Date(0);
+        console.log(dt);
+        let dt2 = new Date(1000);
+        console.log(dt2);
+
+        let newdate = new Date("2022-02-14");
+        console.log(newdate);
+
+        // Date(year, month, date, hours, minutes, seconds, milliseconds)
+        let mydate = new Date(2050,5,12,10,30,15,85);
+        console.log(mydate);
+
+        let t1 = now.getFullYear();
+        console.log("Year = ",t1);
+        let t2 = now.getDate();
+        console.log("Date = ",t2);
+        let t3 = now.getMonth();
+        console.log("Month = ",t3);
+        let t4 = now.getHours();
+        console.log("Hours = ",t4);
+        let t5 = now.getMinutes();
+        console.log("Minutes = ",t5);
+
+        let t6 = Date.now();            //milliseconds from 1970 Date(0)
+        console.log(t6);
+
+        newdate.setDate(8);
+        newdate.setMinutes(29);
+        console.log(newdate);
+
+        setInterval(updatetime,1000);
+
+        function updatetime()
+        {
+            time.innerHTML = new Date();
+        }
+
+    </script>
+</body>
+</html>

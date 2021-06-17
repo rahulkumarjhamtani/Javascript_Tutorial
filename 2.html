@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Functions</title>
+</head>
+<body>
+    <script>
+        var str = "This is a string";
+        console.log(str);
+        
+        var pos = str.indexOf("string");
+        console.log(pos);
+
+        var pos = str.lastIndexOf("i");
+        console.log(pos);
+
+        var substr = str.slice(-5,-1);          //can also take -ve values
+        console.log(substr);
+
+        var substr = str.substring(1,7);
+        console.log(substr);
+
+        var replace = str.replace("a string","rahul");
+        console.log(str);
+        console.log(replace);
+
+        console.log(str.toUpperCase());
+        console.log(str.toLowerCase());
+
+        var concat = str.concat(" in js");
+        console.log(concat);
+
+        var newvar = "     this is a    new string  ";
+        console.log(newvar.trim());
+
+        var char2 = str.charAt(3);
+        console.log(char2);
+
+        var char3 = str.charCodeAt(0);
+        console.log(char3);
+
+        console.log(str[8]);
+    </script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <style>
+        body
+        {
+            background:url("bg.jpg");
+            /* background-repeat:no-repeat; */
+            background-size:100% auto;
+            color:white;
+            font-size:25px;
+        }
+        h1
+        {
+            text-align:center;
+            font-style: italic;
+            font-family: cursive;
+        }
+        input
+        {
+            margin:10px 0px 10px 100px;
+            padding:5px;
+        }
+        table
+        {
+            width:30%;
+            margin:auto;
+            border:5px dotted grey;
+            border-radius:20px;
+            padding:50px;
+        }
+        .btn
+        {
+            background-color: rgb(6, 94, 94);
+            color:rgb(73, 247, 232);
+            font-size:15px;
+            width:10%;
+            height:50px;
+            font-weight: bold;
+            border:2px solid #FFFFFF;
+            border-radius: 50px;
+            cursor:pointer;
+        }
+        #set1
+        {
+            margin-top:2%;
+            margin-left:40%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Login</h1>
+    
+    <!-- <form class="" action="16.html" method="post"></form> -->
+    <table>
+        <tr>
+            <td>Name</td>
+            <td><input class="myText" onfocus="this.value=''" type="text" name="array[]"></input></td>
+            <br>
+        </tr>
+        <tr>
+            <td>Age</td>
+            <td><input class="myText" onfocus="this.value=''" type="number" name="array[]"></input></td>
+            <br>
+        </tr>
+        <tr>
+            <td>DOB</td>
+            <td><input class="myText" onfocus="this.value=''" type="date" name="array[]"></input></td>
+
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input class="myText" onfocus="this.value=''" type="password" name="array[]"></input></td>
+            
+        </tr>
+        <tr>
+            <td>EmailID</td>
+            <td><input class="myText" onfocus="this.value=''" type="email" name="array[]"></input></td>
+
+        </tr>
+    </table>
+        <button id="set1" class="btn" onclick="show()">Submit</button>
+        <button id="set2" class="btn" onclick="reset()">Clear</button>
+    <br>
+    <h2 id="hd"></h2>
+    <p id="demo"></p>
+    
+      
+        <script type="text/javascript">
+            var k = "";
+            
+            function show() {
+                // document.getElementById("demo").innerHTML = "";
+                k = "<br>";
+                var input = document.getElementsByName('array[]');
+                var b = ['Name','Age','DOB','Password','Email-ID'];
+                for (var i = 0; i < input.length; i++) {
+                    var a = input[i];
+                    // k = k + "array[" + i + "].value= "
+                    //                    + a.value + " ";
+                    // if(i == 6)
+                    // {
+                    //     k = k + "Password = " + a.value + "<br>";
+                    // }
+                    switch(i)
+                    {
+                        case i:
+                            k = k + b[i] + " - " + a.value + "<br>";
+                            break;
+                        // case 1:
+                        //     k = k + "Name = " + a.value + "<br>";
+                        //     break;
+                        // case 6:
+                        //     k = k + "Password = " + a.value + "<br>";
+                        //     break;
+                        // case 7:
+                        //     k = k + "Email-ID = " + a.value + "<br>";
+                        //     break;
+                        // default:
+                        //     break;
+                    }
+                }
+                
+                document.getElementById("demo").innerHTML = k;
+                document.getElementById("hd").innerHTML = "Details";
+            }
+            function reset(){
+                document.getElementById("demo").innerHTML = "";
+                document.getElementById("hd").innerHTML = "";
+            }
+
+        </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+</head>
+<body>
+    <div class="container">
+        Hello World
+    </div>
+    <script>
+        function greet()
+        {
+            console.log("Good Morning");
+        }
+        greet();
+
+        //ARROW Functions
+
+        let greet2 = ()=>
+        {
+            console.log("Good Evening");
+        }
+        greet2();
+
+        let greet3 = ()=>   console.log("Good Night");
+        greet3();
+
+        // let sum2 = (a,b)=>
+        // {
+        //     return a + b;
+        // }
+
+        // OR
+
+        let sum2 = (a,b) => a+b;
+        let x = sum2(13,20);
+        console.log("Sum = ", x);
+
+        let half = a => a/2;
+        let y = half(49);
+        console.log(`Half = ${y}`);
+
+        let obj1 = {
+            greeting : "Good",
+            name : ["Rahul","Rohit","Priyanshu"],
+            speak(){
+                this.name.forEach((student)=>{
+                    console.log(this.greeting + " Bye " + student);
+                });
+            }
+
+        }
+        obj1.speak();
+        setTimeout(()=>
+        {
+            console.log("Inside Timeout");
+        }, 3000);
+    </script>
+</body>
+</html>
